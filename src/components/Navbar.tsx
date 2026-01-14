@@ -57,7 +57,7 @@ const Navbar = ({ isDark, toggleTheme }: NavbarProps) => {
         className={`sticky top-0 z-50 transition-all duration-300 ${
           isScrolled 
             ? 'bg-background/95 backdrop-blur-xl shadow-lg border-b border-border' 
-            : 'bg-transparent'
+            : 'bg-background/80 backdrop-blur-md'
         }`}
       >
         <div className="container mx-auto px-4">
