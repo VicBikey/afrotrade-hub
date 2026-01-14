@@ -10,6 +10,7 @@ import WhyChooseUsSection from '@/components/WhyChooseUsSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import WhatsAppWidget from '@/components/WhatsAppWidget';
+import BackToTopButton from '@/components/BackToTopButton';
 
 const Index = () => {
   const [isDark, setIsDark] = useState(true);
@@ -40,6 +41,7 @@ const Index = () => {
       <CTASection />
       <Footer />
       <WhatsAppWidget />
+      <BackToTopButton />
     </div>
   );
 };
