@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, ArrowUp } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowUp, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -39,13 +39,19 @@ const Footer = () => {
               Trade directly with real people, set your own rates, and use various payment methods.
             </p>
             <div className="flex gap-4">
-              {['facebook', 'twitter', 'instagram', 'linkedin'].map((social) => (
+              {[
+                { name: 'facebook', icon: Facebook, href: '#' },
+                { name: 'twitter', icon: Twitter, href: '#' },
+                { name: 'instagram', icon: Instagram, href: '#' },
+                { name: 'linkedin', icon: Linkedin, href: '#' },
+              ].map((social) => (
                 <a 
-                  key={social} 
-                  href="#" 
+                  key={social.name} 
+                  href={social.href}
+                  aria-label={social.name}
                   className="w-10 h-10 rounded-xl bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-all duration-300"
                 >
-                  <span className="capitalize text-xs font-medium">{social.charAt(0).toUpperCase()}</span>
+                  <social.icon className="w-5 h-5" />
                 </a>
               ))}
             </div>
