@@ -31,7 +31,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Navbar isDark={isDark} toggleTheme={toggleTheme} />
-      <CryptoTicker />
+      <div className="sticky top-[80px] z-40">
+        <CryptoTicker />
+      </div>
       <HeroSection />
       <FeaturesSection />
       <HowItWorksSection />
