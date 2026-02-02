@@ -48,10 +48,10 @@ const Footer = ({ isDark = false }: FooterProps) => {
             </p>
             <div className="flex gap-4">
               {[
-                { name: 'facebook', icon: Facebook, href: '#' },
-                { name: 'twitter', icon: Twitter, href: '#' },
-                { name: 'instagram', icon: Instagram, href: '#' },
-                { name: 'linkedin', icon: Linkedin, href: '#' },
+                { name: 'facebook', icon: Facebook, href: 'https://www.facebook.com/share/r/1Ee43dKLT2/' },
+                { name: 'twitter', icon: Twitter, href: 'https://x.com/trilliontecht/status/2018269802519838803' },
+                { name: 'instagram', icon: Instagram, href: 'https://www.instagram.com/reel/DUQIih-DR4X/' },
+                { name: 'linkedin', icon: Linkedin, href: 'https://www.linkedin.com/posts/trillion-tech-trade_avoid-p2p-horror-stories-always-vet-merchants-activity-7424035875191353344-CI0k' },
               ].map((social) => (
                 <a 
                   key={social.name} 

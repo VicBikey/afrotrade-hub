@@ -6,16 +6,18 @@ const WhatsAppWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
 
+  const whatsappLink = 'https://wa.me/message/AMRMCWL6BIW4N1';
+
   const handleSend = () => {
     if (message.trim()) {
-      window.open(`https://wa.me/2347036184469?text=${encodeURIComponent(message)}`, '_blank');
+      window.open(`${whatsappLink}`, '_blank');
       setMessage('');
       setIsOpen(false);
     }
   };
 
   const handleQuickMessage = () => {
-    window.open(`https://wa.me/2347036184469?text=${encodeURIComponent('Hello, I need assistance with crypto trading.')}`, '_blank');
+    window.open(whatsappLink, '_blank');
   };
 
   return (
