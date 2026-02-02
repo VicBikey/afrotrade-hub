@@ -39,7 +39,7 @@ const Index = () => {
       <WhyChooseUsSection />
       <SupportedCryptoSection />
       <CTASection />
-      <Footer />
+      <Footer isDark={isDark} />
       <WhatsAppWidget />
       <BackToTopButton />
     </div>

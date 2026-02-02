@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Moon, Sun, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
-
+import logoLight from '@/assets/logo-light.svg';
+import logoDark from '@/assets/logo-dark.svg';
 interface NavbarProps {
   isDark: boolean;
   toggleTheme: () => void;
@@ -84,10 +85,11 @@ const Navbar = ({ isDark, toggleTheme }: NavbarProps) => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-yellow-400 rounded-xl flex items-center justify-center shadow-lg">
-                  <span className="text-primary-foreground font-display font-bold text-xl">T</span>
-                </div>
-                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-primary rounded-full animate-pulse" />
+                <img 
+                  src={isDark ? logoDark : logoLight} 
+                  alt="Trillion Trade Logo" 
+                  className="h-12 w-auto"
+                />
               </motion.div>
               <div className="flex flex-col">
                 <span className="font-display font-bold text-xl tracking-tight">TRILLION</span>

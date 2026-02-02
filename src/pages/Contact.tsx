@@ -247,7 +247,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <Footer />
+      <Footer isDark={isDark} />
       <WhatsAppWidget />
     </div>
   );

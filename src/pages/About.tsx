@@ -259,7 +259,7 @@ const About = () => {
         </div>
       </section>
 
-      <Footer />
+      <Footer isDark={isDark} />
       <WhatsAppWidget />
     </div>
   );

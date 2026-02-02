@@ -146,7 +146,7 @@ const FAQs = () => {
         </div>
       </section>
 
-      <Footer />
+      <Footer isDark={isDark} />
       <WhatsAppWidget />
     </div>
   );

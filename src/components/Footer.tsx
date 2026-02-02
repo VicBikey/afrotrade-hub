@@ -1,8 +1,14 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, ArrowUp, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import logoLight from '@/assets/logo-light.svg';
+import logoDark from '@/assets/logo-dark.svg';
 
-const Footer = () => {
+interface FooterProps {
+  isDark?: boolean;
+}
+
+const Footer = ({ isDark = false }: FooterProps) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -26,16 +32,18 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="lg:col-span-2 space-y-6">
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-yellow-400 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-primary-foreground font-display font-bold text-xl">T</span>
-              </div>
+              <img 
+                src={isDark ? logoDark : logoLight} 
+                alt="Trillion Trade Logo" 
+                className="h-12 w-auto"
+              />
               <div className="flex flex-col">
                 <span className="font-display font-bold text-xl tracking-tight">TRILLION</span>
                 <span className="text-xs text-muted-foreground tracking-widest">TECH & TRADE</span>
               </div>
             </Link>
             <p className="text-muted-foreground max-w-md">
-              Trillion Trade is the easiest P2P platform for trading cryptocurrencies. 
+              Trillion Trade is the easiest P2P platform for trading cryptocurrencies.
               Trade directly with real people, set your own rates, and use various payment methods.
             </p>
             <div className="flex gap-4">
