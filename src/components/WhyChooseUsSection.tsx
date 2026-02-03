@@ -85,15 +85,15 @@ const WhyChooseUsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="absolute -bottom-8 -left-8 glass-card p-6 shadow-xl"
+                className="absolute -bottom-4 sm:-bottom-8 left-0 sm:-left-8 glass-card p-4 sm:p-6 shadow-xl"
               >
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-yellow-400 flex items-center justify-center">
-                    <span className="text-2xl">🌍</span>
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br from-primary to-yellow-400 flex items-center justify-center">
+                    <span className="text-xl sm:text-2xl">🌍</span>
                   </div>
                   <div>
-                    <p className="text-3xl font-display font-bold text-gradient">130+</p>
-                    <p className="text-sm text-muted-foreground">Countries Served</p>
+                    <p className="text-2xl sm:text-3xl font-display font-bold text-gradient">130+</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">Countries Served</p>
                   </div>
                 </div>
               </motion.div>

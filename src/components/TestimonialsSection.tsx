@@ -44,14 +44,14 @@ const TestimonialsSection = () => {
           className="text-center mb-16"
         >
           <span className="text-primary text-sm font-medium">Our Review</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold mt-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mt-4">
             More Than <span className="text-gradient">4,405,28</span> Happy Customers{' '}
-            <br className="hidden md:block" />
+            <br className="hidden sm:block" />
             Trust Our Services
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}

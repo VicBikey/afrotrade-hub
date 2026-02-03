@@ -78,18 +78,18 @@ const HeroSection = () => {
               <span className="text-sm font-medium">Simple. Quick. Secure.</span>
             </motion.div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">
               Buy & Sell Crypto Globally —{' '}
               <span className="text-gradient">Instantly Trade</span>{' '}
               Across 130+ Countries
             </h1>
 
-            <p className="text-lg text-muted-foreground max-w-xl">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-xl">
               Trillion Trade is the easiest P2P platform for trading cryptocurrencies. 
               Trade directly with real people, set your own rates, and use various payment methods.
             </p>
 
-            <div className="flex flex-wrap gap-6">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6">
               {[
                 { icon: Zap, text: 'Fast Settlements' },
                 { icon: Shield, text: 'Escrow Protection' },
@@ -105,7 +105,7 @@ const HeroSection = () => {
                   <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
                     <item.icon className="w-5 h-5 text-primary" />
                   </div>
-                  <span className="font-medium">{item.text}</span>
+                  <span className="font-medium text-sm sm:text-base">{item.text}</span>
                 </motion.div>
               ))}
             </div>
@@ -114,14 +114,14 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4"
             >
-              <Button variant="hero" size="xl" asChild>
+              <Button variant="hero" size="lg" className="w-full sm:w-auto" asChild>
                 <a href="https://demo.instantexchangers.com/exchange/USDT-TRC20/NGN" target="_blank" rel="noopener noreferrer">
                   Start Trading <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
               </Button>
-              <Button variant="hero-outline" size="xl" asChild>
+              <Button variant="hero-outline" size="lg" className="w-full sm:w-auto" asChild>
                 <a href="#how-it-works">
                   How It Works
                 </a>
@@ -136,7 +136,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-            <div className="glass-card p-8 shadow-2xl">
+            <div className="glass-card p-4 sm:p-6 md:p-8 shadow-2xl">
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
@@ -145,11 +145,11 @@ const HeroSection = () => {
                 {/* Amount input */}
                 <div className="space-y-2">
                   <label className="text-sm text-muted-foreground">You Send</label>
-                  <div className="flex gap-2">
+                  <div className="flex flex-col sm:flex-row gap-2">
                     <input
                       type="number"
                       placeholder="0"
-                      className="flex-1 bg-secondary/50 border border-border rounded-xl px-4 py-3 text-2xl font-semibold focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="flex-1 bg-secondary/50 border border-border rounded-xl px-4 py-3 text-xl sm:text-2xl font-semibold focus:outline-none focus:ring-2 focus:ring-primary"
                     />
                     <div className="relative">
                       <button

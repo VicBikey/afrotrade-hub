@@ -35,9 +35,9 @@ const Footer = ({ isDark = false }: FooterProps) => {
       </motion.button>
 
       <div className="container mx-auto px-4 pt-16 pb-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12">
           {/* Logo & Description */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="sm:col-span-2 lg:col-span-2 space-y-6">
             <Link to="/" className="flex items-center gap-3">
               <img 
                 src={isDark ? logoDark : logoLight} 

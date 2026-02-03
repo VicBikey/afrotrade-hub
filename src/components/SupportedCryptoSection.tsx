@@ -43,12 +43,12 @@ const SupportedCryptoSection = () => {
           className="text-center mb-16"
         >
           <span className="text-primary text-sm font-medium">We Are Covering</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold mt-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mt-4">
             Send Payments Locally — <span className="text-gradient">No Borders, No Hassle</span>
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
           {cryptos.map((crypto, index) => (
             <motion.div
               key={crypto.symbol}
@@ -56,17 +56,17 @@ const SupportedCryptoSection = () => {
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.4, delay: index * 0.1 }}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="glass-card p-6 text-center group cursor-pointer hover:shadow-xl transition-all duration-300"
+              className="glass-card p-4 sm:p-6 text-center group cursor-pointer hover:shadow-xl transition-all duration-300"
             >
-              <div className="w-16 h-16 mx-auto rounded-2xl bg-card/50 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto rounded-xl sm:rounded-2xl bg-card/50 flex items-center justify-center mb-3 sm:mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
                 <img 
                   src={crypto.icon} 
                   alt={crypto.name} 
-                  className="w-10 h-10 object-contain"
+                  className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
                 />
               </div>
-              <h3 className="font-display font-semibold text-lg">{crypto.name}</h3>
-              <p className="text-sm text-muted-foreground">{crypto.symbol}</p>
+              <h3 className="font-display font-semibold text-base sm:text-lg">{crypto.name}</h3>
+              <p className="text-xs sm:text-sm text-muted-foreground">{crypto.symbol}</p>
             </motion.div>
           ))}
         </div>

@@ -31,18 +31,18 @@ const CTASection = () => {
         >
           <span className="text-primary text-sm font-medium">Connect Us</span>
           
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold">
             Pay Businesses or Support Family —{' '}
             <span className="text-gradient">Instantly, Anywhere</span> in the World with Trillion Trade.
           </h2>
 
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button variant="hero" size="xl" asChild>
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+            <Button variant="hero" size="lg" className="w-full sm:w-auto" asChild>
               <a href="https://demo.instantexchangers.com/exchange/USDT-TRC20/NGN" target="_blank" rel="noopener noreferrer">
                 Start Trading <ArrowRight className="w-5 h-5 ml-2" />
               </a>
             </Button>
-            <Button variant="hero-outline" size="xl" asChild>
+            <Button variant="hero-outline" size="lg" className="w-full sm:w-auto" asChild>
               <Link to="/contact">
                 Contact Us
               </Link>

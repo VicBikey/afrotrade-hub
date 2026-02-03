@@ -52,13 +52,13 @@ const HowItWorksSection = () => {
           className="text-center mb-16"
         >
           <span className="text-primary text-sm font-medium">Getting Started</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold mt-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mt-4">
             Get Set Up And Start Sending And Receiving{' '}
             <span className="text-gradient">Cryptocurrency</span> In Minutes
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {steps.map((step, index) => (
             <motion.div
               key={step.number}
