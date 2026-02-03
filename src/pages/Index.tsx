@@ -29,7 +29,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground">
       <Navbar isDark={isDark} toggleTheme={toggleTheme} />
       <div className="sticky top-[80px] z-40">
         <CryptoTicker />
