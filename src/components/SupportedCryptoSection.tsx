@@ -3,14 +3,14 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 const cryptos = [
-  { name: 'Bitcoin', symbol: 'BTC', color: 'from-orange-400 to-orange-600' },
-  { name: 'Ethereum', symbol: 'ETH', color: 'from-blue-400 to-purple-600' },
-  { name: 'Binance', symbol: 'BNB', color: 'from-yellow-400 to-yellow-600' },
-  { name: 'Solana', symbol: 'SOL', color: 'from-purple-400 to-pink-600' },
-  { name: 'USDC', symbol: 'USDC', color: 'from-blue-400 to-blue-600' },
-  { name: 'USDT', symbol: 'USDT', color: 'from-green-400 to-teal-600' },
-  { name: 'Tron', symbol: 'TRX', color: 'from-red-400 to-red-600' },
-  { name: 'Polygon', symbol: 'MATIC', color: 'from-purple-500 to-indigo-600' },
+  { name: 'Bitcoin', symbol: 'BTC', icon: 'https://assets.coingecko.com/coins/images/1/small/bitcoin.png' },
+  { name: 'Ethereum', symbol: 'ETH', icon: 'https://assets.coingecko.com/coins/images/279/small/ethereum.png' },
+  { name: 'Binance', symbol: 'BNB', icon: 'https://assets.coingecko.com/coins/images/825/small/bnb-icon2_2x.png' },
+  { name: 'Solana', symbol: 'SOL', icon: 'https://assets.coingecko.com/coins/images/4128/small/solana.png' },
+  { name: 'USDC', symbol: 'USDC', icon: 'https://assets.coingecko.com/coins/images/6319/small/usdc.png' },
+  { name: 'USDT', symbol: 'USDT', icon: 'https://assets.coingecko.com/coins/images/325/small/Tether.png' },
+  { name: 'Tron', symbol: 'TRX', icon: 'https://assets.coingecko.com/coins/images/1094/small/tron-logo.png' },
+  { name: 'Polygon', symbol: 'MATIC', icon: 'https://assets.coingecko.com/coins/images/4713/small/polygon.png' },
 ];
 
 const SupportedCryptoSection = () => {
@@ -58,8 +58,12 @@ const SupportedCryptoSection = () => {
               whileHover={{ scale: 1.05, y: -5 }}
               className="glass-card p-6 text-center group cursor-pointer hover:shadow-xl transition-all duration-300"
             >
-              <div className={`w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br ${crypto.color} flex items-center justify-center text-white font-bold text-xl mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                {crypto.symbol.charAt(0)}
+              <div className="w-16 h-16 mx-auto rounded-2xl bg-card/50 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <img 
+                  src={crypto.icon} 
+                  alt={crypto.name} 
+                  className="w-10 h-10 object-contain"
+                />
               </div>
               <h3 className="font-display font-semibold text-lg">{crypto.name}</h3>
               <p className="text-sm text-muted-foreground">{crypto.symbol}</p>
