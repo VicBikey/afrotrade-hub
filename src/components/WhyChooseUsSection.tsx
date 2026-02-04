@@ -66,41 +66,55 @@ const WhyChooseUsSection = () => {
             </Button>
           </motion.div>
 
-          {/* Image */}
+          {/* Image - Floating person effect */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
+            className="relative flex items-center justify-center"
           >
-            <div className="relative">
-              <img 
-                src={whyChooseImage} 
-                alt="Young African man using phone for crypto trading"
-                className="rounded-3xl shadow-2xl"
-              />
-              
-              {/* Floating stats card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="absolute -bottom-4 sm:-bottom-8 left-0 sm:-left-8 glass-card p-4 sm:p-6 shadow-xl"
-              >
-                <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br from-primary to-yellow-400 flex items-center justify-center">
-                    <span className="text-xl sm:text-2xl">🌍</span>
-                  </div>
-                  <div>
-                    <p className="text-2xl sm:text-3xl font-display font-bold text-gradient">130+</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Countries Served</p>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
+            {/* Background glow effects */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-64 h-64 sm:w-80 sm:h-80 bg-primary/30 rounded-full blur-3xl" />
             </div>
+            <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-primary/20 rounded-full blur-2xl" />
+            <div className="absolute bottom-1/4 left-1/4 w-24 h-24 bg-accent/30 rounded-full blur-xl" />
+            
+            {/* Person image - no container, floating effect */}
+            <motion.img 
+              src={whyChooseImage} 
+              alt="Young African man using phone for crypto trading"
+              className="relative z-10 w-full max-w-md object-contain drop-shadow-2xl"
+              style={{
+                filter: 'drop-shadow(0 25px 50px rgba(0, 0, 0, 0.4))'
+              }}
+              animate={{ 
+                y: [0, -10, 0],
+              }}
+              transition={{ 
+                duration: 4, 
+                repeat: Infinity, 
+                ease: "easeInOut" 
+              }}
+            />
+              
+            {/* Floating stats card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="absolute bottom-4 sm:bottom-8 left-0 sm:-left-4 glass-card p-4 sm:p-6 shadow-xl z-20"
+            >
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center">
+                  <span className="text-xl sm:text-2xl">🌍</span>
+                </div>
+                <div>
+                  <p className="text-2xl sm:text-3xl font-display font-bold text-gradient">130+</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Countries Served</p>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
