@@ -3,7 +3,7 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import teamImage from '@/assets/team-success.jpg';
+import whyChooseImage from '@/assets/why-choose-us.png';
 
 const benefits = [
   'Send money cheaper and easier than old-school banks.',
@@ -75,8 +75,8 @@ const WhyChooseUsSection = () => {
           >
             <div className="relative">
               <img 
-                src={teamImage} 
-                alt="African business team celebrating success"
+                src={whyChooseImage} 
+                alt="Young African man using phone for crypto trading"
                 className="rounded-3xl shadow-2xl"
               />
               
