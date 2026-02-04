@@ -66,31 +66,19 @@ const WhyChooseUsSection = () => {
             </Button>
           </motion.div>
 
-          {/* Image - Floating person effect */}
+          {/* Image - matching Features section style */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative flex items-center justify-center min-h-[500px] lg:min-h-[600px]"
+            className="relative"
           >
-            {/* Background glow effects */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-80 h-80 sm:w-96 sm:h-96 lg:w-[450px] lg:h-[450px] bg-primary/30 rounded-full blur-3xl" />
-            </div>
-            <div className="absolute top-1/4 right-1/4 w-40 h-40 bg-primary/20 rounded-full blur-2xl" />
-            <div className="absolute bottom-1/4 left-1/4 w-32 h-32 bg-accent/30 rounded-full blur-xl" />
-            
-            {/* Person image - no container, floating effect */}
             <motion.img 
               src={whyChooseImage} 
               alt="Trade with Trillion - Young African man using phone for crypto trading"
-              className="relative z-10 w-full h-auto max-w-full lg:max-w-[550px] xl:max-w-[600px] object-contain"
-              style={{
-                filter: 'drop-shadow(0 30px 60px rgba(0, 0, 0, 0.5))',
-                imageRendering: 'auto',
-              }}
+              className="w-full h-full object-cover rounded-3xl shadow-2xl"
               animate={{ 
-                y: [0, -12, 0],
+                y: [0, -8, 0],
               }}
               transition={{ 
                 duration: 4, 
@@ -104,7 +92,7 @@ const WhyChooseUsSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="absolute bottom-4 sm:bottom-8 left-0 sm:-left-4 glass-card p-4 sm:p-6 shadow-xl z-20"
+              className="absolute -bottom-4 -left-4 glass-card p-4 sm:p-6 shadow-xl z-20"
             >
               <div className="flex items-center gap-3 sm:gap-4">
                 <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center">
