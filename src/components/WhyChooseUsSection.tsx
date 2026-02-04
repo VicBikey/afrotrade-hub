@@ -71,25 +71,26 @@ const WhyChooseUsSection = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative flex items-center justify-center"
+            className="relative flex items-center justify-center min-h-[500px] lg:min-h-[600px]"
           >
             {/* Background glow effects */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-64 h-64 sm:w-80 sm:h-80 bg-primary/30 rounded-full blur-3xl" />
+              <div className="w-80 h-80 sm:w-96 sm:h-96 lg:w-[450px] lg:h-[450px] bg-primary/30 rounded-full blur-3xl" />
             </div>
-            <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-primary/20 rounded-full blur-2xl" />
-            <div className="absolute bottom-1/4 left-1/4 w-24 h-24 bg-accent/30 rounded-full blur-xl" />
+            <div className="absolute top-1/4 right-1/4 w-40 h-40 bg-primary/20 rounded-full blur-2xl" />
+            <div className="absolute bottom-1/4 left-1/4 w-32 h-32 bg-accent/30 rounded-full blur-xl" />
             
             {/* Person image - no container, floating effect */}
             <motion.img 
               src={whyChooseImage} 
-              alt="Young African man using phone for crypto trading"
-              className="relative z-10 w-full max-w-md object-contain drop-shadow-2xl"
+              alt="Trade with Trillion - Young African man using phone for crypto trading"
+              className="relative z-10 w-full h-auto max-w-full lg:max-w-[550px] xl:max-w-[600px] object-contain"
               style={{
-                filter: 'drop-shadow(0 25px 50px rgba(0, 0, 0, 0.4))'
+                filter: 'drop-shadow(0 30px 60px rgba(0, 0, 0, 0.5))',
+                imageRendering: 'auto',
               }}
               animate={{ 
-                y: [0, -10, 0],
+                y: [0, -12, 0],
               }}
               transition={{ 
                 duration: 4, 
